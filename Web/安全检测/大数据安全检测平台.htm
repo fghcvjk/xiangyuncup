@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大数据安全检测平台</title>
+
+    <link href="%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E6%A3%80%E6%B5%8B%E5%B9%B3%E5%8F%B0_files/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E6%A3%80%E6%B5%8B%E5%B9%B3%E5%8F%B0_files/jquery-1.js"></script>
+</head>
+<body onload="sendRequest()">
+
+<div class="videozz"></div>
+
+
+<div class="box">
+    <div class="box-a">
+        <div class="m-2">
+            <div class="m-2-1">
+                
+                    <div class="m-2-2"><h2>请登录</h2></div>
+					<p></p>
+                    <div class="m-2-2">
+                        <input id="username" type="text" name="username" placeholder="用户名">
+                    </div>
+                    <div class="m-2-2">
+						<input id="password" type="text" name="password" placeholder="密码">
+					</div>
+					<p></p>
+                    <div class="m-2-2">
+                        <button id="btn" type="submit" value="确认">确认</button>
+                    </div>
+         
+            </div>
+        </div>
+        <div class="m-5">
+            <div id="m-5-id-1">
+                <div id="m-5-2">
+                    <div id="m-5-id-2">
+                    </div>
+                    <div id="m-5-id-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="m-10"></div>
+        <div class="m-xz7"></div>
+        <div class="m-xz8 xzleft"></div>
+        <div class="m-xz9"></div>
+        <div class="m-xz9-1"></div>
+        <div class="m-x17 xzleft"></div>
+        <div class="m-x18"></div>
+        <div class="m-x19 xzleft"></div>
+        <div class="m-x20"></div>
+        <div class="m-8"></div>
+        <div class="m-9"><div class="masked1" id="sx8">大数据安全检测平台</div></div>
+        <div class="m-11">
+            <div class="m-k-1"><div class="t1"></div></div>
+            <div class="m-k-2"><div class="t2"></div></div>
+            <div class="m-k-3"><div class="t3"></div></div>
+            <div class="m-k-4"><div class="t4"></div></div>
+            <div class="m-k-5"><div class="t5"></div></div>
+            <div class="m-k-6"><div class="t6"></div></div>
+            <div class="m-k-7"><div class="t7"></div></div>
+        </div>
+        <div class="m-14"><div class="ss"></div></div>
+        <div class="m-15-a">
+            <div class="m-15-k">
+                <div class="m-15xz1">
+                    <div class="m-15-dd2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="m-16"></div>
+        <div class="m-17"></div>
+        <div class="m-18 xzleft"></div>
+        <div class="m-19"></div>
+        <div class="m-20 xzleft"></div>
+        <div class="m-21"></div>
+        <div class="m-22"></div>
+        <div class="m-23 xzleft"></div>
+        <div class="m-24" id="localtime"></div>
+    </div>
+</div>
+<script src="%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E6%A3%80%E6%B5%8B%E5%B9%B3%E5%8F%B0_files/common.js"></script>
+
+
+<script type="text/javascript">
+
+        $("#btn").click(function(){
+
+            var uid = $("#username").val();
+            var pwd = $("#password").val();
+            $.ajax({
+                url:"#",
+				data: JSON.stringify({                  
+					username: uid,
+					password: pwd
+					
+				}),
+				contentType: "application/json; charset=utf-8",
+                type:"POST",
+                datatype:"JSON",
+                success:function(data){
+					$('#result').text(data.result);
+					if(data=="OK")
+					{
+						window.location="index.php";
+					}
+					else
+					{
+						window.location="index.php";
+					}
+                }
+				// 注意最后一个无需逗号
+
+            });
+
+
+
+    });
+
+</script>
+
+
+
+
+</body></html>
